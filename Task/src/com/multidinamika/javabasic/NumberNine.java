@@ -14,14 +14,11 @@ public class NumberNine {
 
     public static class StringLength
     {
-        private int strLengthWithArray(String str)
+        private long strLengthWithArray(String str)
         {
-            char[] charArr = str.toCharArray();
-            int count = 0;
-            for (char c: charArr)
-            {
-                count++;
-            }
+            long count = 0;
+            List<String> list = new ArrayList<String>(Arrays.asList(str.split("")));
+            count = list.stream().count();
             return count;
         }
     }
