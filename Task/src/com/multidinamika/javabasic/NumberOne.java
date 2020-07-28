@@ -17,12 +17,12 @@ public class NumberOne {
     {
         public static int Penjumlahan(int x, int y)
         {
-            return x + y;
+            return Math.addExact(x,y);
         }
 
         public static int Pengurangan(int x, int y)
         {
-            return x - y;
+            return Math.subtractExact(x,y);
         }
 
         public static double Perpangkatan(int x, int y)
@@ -40,12 +40,12 @@ public class NumberOne {
 
         public static int Pembagian(int x,int y)
         {
-            return x/y;
+            return Math.floorDiv(x,y);
         }
 
         public static int Perkalian(int x, int y)
         {
-            return x*y;
+            return Math.multiplyExact(x,y);
         }
     }
 
