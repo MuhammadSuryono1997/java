@@ -2,29 +2,24 @@ package com.multidinamika.javabasic;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class NumberSeven {
     public static void main(String[] args) {
-        Kabisat kabisat = new Kabisat();
-        List<String> listKabisat = kabisat.get(2000,2004);
-        for (String i:listKabisat)
-        {
-            System.out.println(i+", ");
-        }
+        List<Integer> kabisat = IntStream.rangeClosed(2000, 2010)
+                .boxed().collect(Collectors.toList());
+
+        kabisat.stream().forEach(new Kabisat()::get);
     }
 
     public static class Kabisat
     {
-        private List<String> get(int start, int end)
+        private void get(Integer i)
         {
-            List<String> listKabisat = new ArrayList<String>();
-            for (int i = start; i < end+1 ; i++) {
-                boolean kabisat = (i%4==0 || i%400==0 || i%100 == 0);
-                if (kabisat == true)listKabisat.add(i + " adalah tahun kabisat");
-                else listKabisat.add(i + " bukan tahun kabisat");
-            }
-
-            return  listKabisat;
+            boolean kabisat = (i % 4 ==0 || i % 100 ==0 || i % 400 == 0);
+            if (kabisat == true) System.out.println(i + " adalah tahun kabisat");
+            else System.out.println(i + " bukan tahun kabisat");
         }
     }
 }
