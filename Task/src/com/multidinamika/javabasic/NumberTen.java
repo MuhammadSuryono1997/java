@@ -5,10 +5,11 @@ import java.util.stream.Collectors;
 
 public class NumberTen {
     public static void main(String[] args) {
+        Irisan irisan = new Irisan();
         var s1 = List.of(3,1,7,4,5,6,8,2);
         var s2 = List.of(8,7,2,8,2,6);
 
-        Irisan irisan = new Irisan();
+        
         System.out.println(irisan.get(s1,s2));
     }
 
