@@ -11,24 +11,12 @@ public class NumberThree {
         {
             String result = "";
 
-            if (x%2 == 1 )
-            {
-                if (x%5 == 0)
-                {
-                    result = "Imperio Aberto";
-                }else{
-                    result = "Imperio";
-                }
-            }
+            if ((x % 2) == 1)
+                if ((x % 5) != 0) result = "Imperio";
+                else result = "Imperio Aberto";
             else if (x%2 == 0)
-            {
-                if (x%4 == 0)
-                {
-                    result = "Crucio Reducto";
-                }else {
-                    result = "Crucio";
-                }
-            }
+                if (x % 4 == 0) result = "Crucio Reducto";
+                else result = "Crucio";
 
             return result;
         }

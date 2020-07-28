@@ -1,12 +1,15 @@
 package com.multidinamika.javabasic;
 
-import java.util.Scanner;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 public class NumberNine {
     public static void main(String[] args) {
         StringLength strLen = new StringLength();
-        String str = strLen.inputValue();
-        System.out.println("Kalimat "+str+" memiliki panjang "+strLen.strLengthWithArray(str));
+        System.out.println("Kalimat berikut memiliki panjang "+strLen.strLengthWithArray("lari pagi"));
     }
 
     public static class StringLength
@@ -20,16 +23,6 @@ public class NumberNine {
                 count++;
             }
             return count;
-        }
-
-        private String inputValue()
-        {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter value string : ");
-            String sentences = input.nextLine();
-
-            return sentences;
-
         }
     }
 }

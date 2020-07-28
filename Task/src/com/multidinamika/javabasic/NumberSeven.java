@@ -20,12 +20,8 @@ public class NumberSeven {
             List<String> listKabisat = new ArrayList<String>();
             for (int i = start; i < end+1 ; i++) {
                 boolean kabisat = (i%4==0 || i%400==0 || i%100 == 0);
-                if (kabisat == true)
-                {
-                    listKabisat.add(i+" adalah tahun kabisat");
-                }else{
-                    listKabisat.add(i+" bukan tahun kabisat");
-                }
+                if (kabisat == true)listKabisat.add(i + " adalah tahun kabisat");
+                else listKabisat.add(i + " bukan tahun kabisat");
             }
 
             return  listKabisat;

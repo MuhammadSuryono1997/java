@@ -22,24 +22,12 @@ public class NumberSix {
             for (int i = 1; i < limit+1 ; i++)
             {
                 if (i%2 == 0)
-                {
-                    if (i%8 == 0)
-                    {
-                        listOddEven.add("Genap dan Kelipatan delapan");
-                    }else {
-                        listOddEven.add("Genap");
-                    }
-                }else if (i%2 == 1)
-                {
-                    if (i%7 == 0)
-                    {
-                        listOddEven.add("Ganjil dan Kelipatan tujuh");
-                    }else {
-                        listOddEven.add("Ganjil");
-                    }
-                }
+                    if (i % 8 == 0) listOddEven.add("Genap dan Kelipatan delapan");
+                    else listOddEven.add("Genap");
+                else if (i%2 == 1)
+                    if (i % 7 == 0) listOddEven.add("Ganjil dan Kelipatan tujuh");
+                    else listOddEven.add("Ganjil");
             }
-
             return listOddEven;
         }
     }

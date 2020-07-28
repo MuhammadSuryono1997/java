@@ -11,19 +11,10 @@ public class NumberFive {
         private String get(int age)
         {
             String result = "";
-            if (age >= 21)
-            {
-                result = "DEWASA";
-            }else if (age >= 13)
-            {
-                result = "REAMAJA";
-            }else if (age >= 9)
-            {
-                result = "BIMBINGAN ORANG TUA";
-            }else if (age < 9)
-            {
-                result = "SEMUA USIA";
-            }
+            if (age >= 21) result = "DEWASA";
+            else if (age >= 13) result = "REAMAJA";
+            else if (age >= 9) result = "BIMBINGAN ORANG TUA";
+            else if (age < 9) result = "SEMUA USIA";
             return result;
         }
     }
