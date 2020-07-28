@@ -6,7 +6,7 @@ import java.util.List;
 public class NumberSix {
     public static void main(String[] args) {
         GanjilGenap oddeven = new GanjilGenap();
-        List<String> lisOddEven = oddeven.cetak(50);
+        List<String> lisOddEven = oddeven.cetak(200);
 
         for (String ganjilgenap:lisOddEven)
         {
@@ -21,7 +21,8 @@ public class NumberSix {
             List<String> listOddEven = new ArrayList<String>();
             for (int i = 1; i < limit+1 ; i++)
             {
-                if (i%2 == 0)
+                if (i % 100 == 0) listOddEven.add("Kelipatan seratus");
+                else if (i%2 == 0)
                     if (i % 8 == 0) listOddEven.add("Genap dan Kelipatan delapan");
                     else listOddEven.add("Genap");
                 else if (i%2 == 1)
