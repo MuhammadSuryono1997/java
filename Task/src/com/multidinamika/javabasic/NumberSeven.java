@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 public class NumberSeven {
     public static void main(String[] args) {
-        List<Integer> kabisat = IntStream.rangeClosed(2000, 2010)
+        List<Integer> kabisat = IntStream.rangeClosed(1700, 1710)
                 .boxed().collect(Collectors.toList());
 
         kabisat.stream().forEach(new Kabisat()::get);
@@ -17,7 +17,7 @@ public class NumberSeven {
     {
         private void get(Integer i)
         {
-            boolean kabisat = (i % 4 ==0 || i % 100 ==0 || i % 400 == 0);
+            boolean kabisat = ((i % 4 ==0 && i % 100 !=0) || i % 400 == 0);
             if (kabisat == true) System.out.println(i + " adalah tahun kabisat");
             else System.out.println(i + " bukan tahun kabisat");
         }

@@ -9,7 +9,7 @@ public class NumberSix {
     public static void main(String[] args) {
         List<Integer> range = IntStream.rangeClosed(1,200)
                 .boxed().collect(Collectors.toList());
-
+// Bisa menggunakan map denganmengubah method check ke return
         range.stream().forEach(new GanjilGenap()::check);
     }
 

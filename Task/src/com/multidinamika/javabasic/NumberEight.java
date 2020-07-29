@@ -1,5 +1,6 @@
 package com.multidinamika.javabasic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -16,9 +17,11 @@ public class NumberEight {
     {
         private int NumbersWithoutMax(List<Integer> list)
         {
-            int sum, max;
-            max = Collections.max(list);
-            sum = list.stream().reduce(0, Integer::sum) - max;
+            int sum;
+            var newList = new ArrayList<Integer>(list);
+            newList.remove(Collections.max(list));
+            sum = newList.stream().reduce(0, Integer::sum);
+
             return sum;
         }
     }
